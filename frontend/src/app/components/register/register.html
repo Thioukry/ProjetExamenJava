@@ -1,0 +1,33 @@
+<div style="max-width: 450px; margin: 50px auto; padding: 20px; border: 1px solid #ccc;">
+  <h2>Inscription</h2>
+  <p *ngIf="errorMessage" style="color: red;">{{ errorMessage }}</p>
+
+  <form (ngSubmit)="onRegister()">
+    <div>
+      <label>Prénom :</label><br>
+      <input type="text" [(ngModel)]="user.prenom" name="prenom" required style="width: 100%;">
+    </div>
+    <br>
+    <div>
+      <label>Nom :</label><br>
+      <input type="text" [(ngModel)]="user.nom" name="nom" required style="width: 100%;">
+    </div>
+    <br>
+    <div>
+      <label>Email :</label><br>
+      <input type="email" [(ngModel)]="user.email" name="email" required style="width: 100%;">
+    </div>
+    <br>
+    <div>
+      <label>Téléphone :</label><br>
+      <input type="text" [(ngModel)]="user.telephone" name="telephone" required style="width: 100%;">
+    </div>
+    <br>
+    <div>
+      <label>Mot de passe :</label><br>
+      <input type="password" [(ngModel)]="user.motDePasse" name="motDePasse" required style="width: 100%;">
+    </div>
+    <br>
+    <button type="submit" style="width: 100%;">S'inscrire</button>
+  </form>
+</div>
